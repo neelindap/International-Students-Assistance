@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ISA | Volunteers</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>		
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.5.0/css/xeditable.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.5.0/js/xeditable.min.js"></script>
+
+		<link rel="stylesheet" href="../css/main.css">
+		<script type="text/javascript" src="volunteers.controller.js"></script>
+		<script type="text/javascript" src="../js/isa.js"></script>
+
+		
+	</head>
+
+	<body ng-app="volunteerApp">
+ 	<div class="container">
+	
+	<div class="row">
+		<nav class="navbar navbar-inverse navbar-fixed-top">	
+			<div class="container-fluid">		
+			
+				<div class="row">
+					<div class="col-sm-6">
+						<img id="uni-logo" src="../images/LOGO.png" alt="Logo">
+					</div>		
+					<div class="col-sm-6">
+						<form action="" id="seacrchForm" class="navbar-form navbar-right">
+						   <div class="input-group">
+							   <input type="Search" placeholder="Search" class="form-control"/>
+							   <div class="input-group-btn">
+						     	    <button class="btn btn-primary">
+										<span class="glyphicon glyphicon-search"></span>
+								    </button>
+							   </div>
+						   </div>
+						</form>
+					</div>
+				</div>
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>					
+				</div>
+
+					
+				<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li><a href="adminHome.html">Assign Volunteer</a></li>
+							<li><a href="volunteerAssigned.html">Assigned</a></li>
+							<li class="active"><a href="#">Volunteers</a></li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="dropdown-toggle" href="#" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-user"></span> Welcome Admin<span class="caret"></span></a>
+								<div class="dropdown-menu">
+									  <form class="form">
+										<a href="#" id="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+									  </form>
+								</div>	
+							</li>	
+						</ul>
+				</div>
+			</div>
+		</nav>	
+	</div>
+	
+
+	<div class="row" ng-controller="volTableData">
+		<div class="container-fluid well" style="background-color:#FFF;">		
+			<div class="col-sm-12">
+				<table class="table table-hover">
+					<thead class="thead-inverse">
+						<tr>
+							<th>Name</th>
+							<th>Email Id</th>
+							<th>Phone Number</th>
+							<th>Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="volunteer in vRecord">
+							<td>
+								<span editable-text="volunteer.name" e-name="name" e-form="rowform">
+						          {{volunteer.name}}
+						        </span>
+						    </td>
+							<td>
+								<span editable-text="volunteer.email" e-name="email" e-form="rowform">
+						          {{volunteer.email}}
+						        </span>
+						    </td>
+							<td>
+								<span editable-text="volunteer.phone" e-name="phone" e-form="rowform">
+						          {{volunteer.phone}}
+						        </span>
+						    </td>
+						    <td>
+						        <!-- form -->
+						        <form editable-form name="rowform" onbeforesave="saveVolunteer($data, volunteer.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == volunteer">
+						          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+						            Save
+						          </button>
+						          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+						            Cancel
+						          </button>
+						        </form>
+						        <div class="buttons" ng-show="!rowform.$visible">
+						          <button type="button" class="btn btn-primary" ng-click="rowform.$show()">Edit</button>
+						          <button type="button" class="btn btn-danger" ng-click="removeVolunteer(volunteer.id, $index)">Delete</button>
+						        </div>  
+						    </td>
+						</tr>
+					</tbody>
+				</table>	
+				<button type="button" class="btn btn-primary pull-right" ng-click="addVolunteer()">Add Volunteer</button>				
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<footer class="container-fluid text-center">
+			<p>&copy; Northeastern University 2016</p>
+		</footer>
+	</div>
+	
+	</div>	
+	</body>
+
+</html>

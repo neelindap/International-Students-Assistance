@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": "Branch Wells",
+    "email": "branchwells@husky.neu.edu",
+    "phone": "+1(883) 527-2927"
+  },
+  {
+    "id": 2,
+    "name": "Clay Morrison",
+    "email": "claymorrison@husky.neu.edu",
+    "phone": "+1(834) 402-2924"
+  },
+  {
+    "id": 3,
+    "name": "Tamika Valenzuela",
+    "email": "tamikavalenzuela@husky.neu.edu",
+    "phone": "+1(995) 590-2614"
+  },
+  {
+    "id": 4,
+    "name": "Samantha Lindsay",
+    "email": "samanthalindsay@husky.neu.edu",
+    "phone": "+1(863) 575-2603"
+  },
+  {
+    "id": 5,
+    "name": "Mara Stephenson",
+    "email": "marastephenson@husky.neu.edu",
+    "phone": "+1(909) 525-2559"
+  },
+  {
+    "id": 6,
+    "name": "Sharron Clarke",
+    "email": "sharronclarke@husky.neu.edu",
+    "phone": "+1(936) 556-3084"
+  },
+  {
+    "id": 7,
+    "name": "Guerra Mcneil",
+    "email": "guerramcneil@husky.neu.edu",
+    "phone": "+1(926) 433-3475"
+  },
+  {
+    "id": 8,
+    "name": "Deloris Weaver",
+    "email": "delorisweaver@husky.neu.edu",
+    "phone": "+1(834) 591-3195"
+  },
+  {
+    "id": 9,
+    "name": "Stanton Wilkins",
+    "email": "stantonwilkins@husky.neu.edu",
+    "phone": "+1(970) 480-2105"
+  },
+  {
+    "id": 10,
+    "name": "Leslie Clayton",
+    "email": "leslieclayton@husky.neu.edu",
+    "phone": "+1(869) 495-3335"
+  },
+  {
+    "id": 11,
+    "name": "Mcpherson Nicholson",
+    "email": "mcphersonnicholson@husky.neu.edu",
+    "phone": "+1(975) 470-2154"
+  },
+  {
+    "id": 12,
+    "name": "Conrad Griffin",
+    "email": "conradgriffin@husky.neu.edu",
+    "phone": "+1(947) 568-2472"
+  },
+  {
+    "id": 13,
+    "name": "Rutledge Garrett",
+    "email": "rutledgegarrett@husky.neu.edu",
+    "phone": "+1(868) 522-2979"
+  },
+  {
+    "id": 14,
+    "name": "Foster Rosario",
+    "email": "fosterrosario@husky.neu.edu",
+    "phone": "+1(805) 579-2094"
+  },
+  {
+    "id": 15,
+    "name": "John Dalton",
+    "email": "johndalton@husky.neu.edu",
+    "phone": "+1(908) 598-2906"
+  },
+  {
+    "id": 16,
+    "name": "Hatfield Shepard",
+    "email": "hatfieldshepard@husky.neu.edu",
+    "phone": "+1(846) 434-2108"
+  },
+  {
+    "id": 17,
+    "name": "Roseann Harris",
+    "email": "roseannharris@husky.neu.edu",
+    "phone": "+1(910) 590-2842"
+  },
+  {
+    "id": 18,
+    "name": "Clara Cummings",
+    "email": "claracummings@husky.neu.edu",
+    "phone": "+1(945) 518-3173"
+  },
+  {
+    "id": 19,
+    "name": "Sandy Rose",
+    "email": "sandyrose@husky.neu.edu",
+    "phone": "+1(804) 512-2402"
+  },
+  {
+    "id": 20,
+    "name": "Carlson Heath",
+    "email": "carlsonheath@husky.neu.edu",
+    "phone": "+1(910) 469-3195"
+  },
+  {
+    "id": 21,
+    "name": "Marion Crosby",
+    "email": "marioncrosby@husky.neu.edu",
+    "phone": "+1(870) 412-3576"
+  },
+  {
+    "id": 22,
+    "name": "Goodman Jackson",
+    "email": "goodmanjackson@husky.neu.edu",
+    "phone": "+1(912) 564-3716"
+  },
+  {
+    "id": 23,
+    "name": "Regina Waller",
+    "email": "reginawaller@husky.neu.edu",
+    "phone": "+1(999) 536-3925"
+  },
+  {
+    "id": 24,
+    "name": "Evans Carver",
+    "email": "evanscarver@husky.neu.edu",
+    "phone": "+1(899) 456-2997"
+  },
+  {
+    "id": 25,
+    "name": "York Galloway",
+    "email": "yorkgalloway@husky.neu.edu",
+    "phone": "+1(820) 588-2421"
+  },
+  {
+    "id": 26,
+    "name": "Sampson Russell",
+    "email": "sampsonrussell@husky.neu.edu",
+    "phone": "+1(950) 541-2737"
+  },
+  {
+    "id": 27,
+    "name": "Britney Brennan",
+    "email": "britneybrennan@husky.neu.edu",
+    "phone": "+1(896) 402-2476"
+  },
+  {
+    "id": 28,
+    "name": "Roslyn Reid",
+    "email": "roslynreid@husky.neu.edu",
+    "phone": "+1(911) 422-2260"
+  },
+  {
+    "id": 29,
+    "name": "Carver Goodman",
+    "email": "carvergoodman@husky.neu.edu",
+    "phone": "+1(902) 599-2359"
+  },
+  {
+    "id": 30,
+    "name": "Puckett Duke",
+    "email": "puckettduke@husky.neu.edu",
+    "phone": "+1(867) 504-3457"
+  },
+  {
+    "id": 31,
+    "name": "Snider Leach",
+    "email": "sniderleach@husky.neu.edu",
+    "phone": "+1(931) 530-4000"
+  },
+  {
+    "id": 32,
+    "name": "Josie Page",
+    "email": "josiepage@husky.neu.edu",
+    "phone": "+1(925) 593-2211"
+  },
+  {
+    "id": 33,
+    "name": "Albert Hubbard",
+    "email": "alberthubbard@husky.neu.edu",
+    "phone": "+1(909) 425-3739"
+  }
+]

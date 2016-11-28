@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - International Student Association</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <script  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="js/isa.js"></script>
+</head>
+
+<body>
+ <div class="container">
+    
+    <div class="row">
+        <nav class="navbar navbar-inverse navbar-fixed-top">    
+            <div class="container-fluid">       
+            
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img id="uni-logo" src="images/LOGO.png" alt="Logo">
+                    </div>      
+                    <div class="col-sm-6">
+                            <form action="" id="seacrchForm" class="navbar-form navbar-right">
+                               <div class="input-group">
+                                   <input type="Search" placeholder="Search" class="form-control"/>
+                                   <div class="input-group-btn">
+                                       <button class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                       </button>
+                                   </div>
+                               </div>
+                            </form>
+                        </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>                   
+                    </div>
+                    
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><a href="">About Us</a></li>
+                            <li><a class="dropdown-toggle" href="#" data-toggle="dropdown">Co-curricular <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu"><a href="#">Clubs</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Entrepreneurship</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Music</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Sports</a></li>
+                                        </ul>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Events</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Blogs</a></li>
+                        </ul>
+                        
+                        
+                        
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li -->
+                            <li>
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+                                    <span class="glyphicon glyphicon-log-in"></span> Login
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu">
+                                  <form class="form" id="formLogin"> 
+                                    <input name="username" id="username" type="text" placeholder="Username"> 
+                                    <input name="password" id="password" type="password" placeholder="Password"><br>
+                                    <button type="button" id="btnLogin" class="btn btn-primary">Login</button>
+                                  </form>
+                                </div>                          
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>  
+    </div>
+    
+
+    <div class="row">
+        <div class="container-fluid well">
+            <div class="col-sm-12">
+                <div id="team" class="team row primary-section">
+                            <h2 style="padding: 0 0 15px 15px;">About ISA</h2>
+                            <div id="team-member" class="row">
+                                <div class="team-text col-sm-6 col-md-6 col-lg-6">
+                                    <h3 class="subtitle">Jayanti Kumari</h3>
+                                    <p>Co-Founder and Co-ordinator of NEUISA. She enjoys developing creative and informative websites. After
+                                        coming to Northeastern, she realized that this university really needs to provide some assistance
+                                        to incoming students especially those coming from outside country. Many universities already had
+                                        such facility so she decided to build this application along with her mates. </p>
+                                </div>
+                                <div class="team-image col-md-6 col-lg-6">
+                                    <img class="col-md-offset-2" src="images/jayanti.jpg" width="300px" height="300px">
+                                </div>
+                            </div>
+
+                            <div id="team-member" class="row">
+                                <div class="team-image col-md-6 col-lg-6">
+                                    <img class="col-md-offset-2" src="images/mayy.jpg" width="300px" height="300px">
+                                </div>
+                                <div class="team-text col-sm-6 col-md-6 col-lg-6">
+                                    <h3 class="subtitle">Mayy Alamin</h3>
+                                    <p>Co-Founder of NEUISA. Coming from Saudi Arabia she also witnessed silimar issues which every international
+                                        students has to go through. She has lots of creative ideas and decided to be a part of this application
+                                        and help incoming students. </p>
+                                </div>
+                            </div>
+
+                            <div id="team-member" class="row">
+                                <div class="team-text col-sm-6 col-md-6 col-lg-6">
+                                    <h3 class="subtitle">Nauka Salot</h3>
+                                    <p>Co-Founder of NEUISA. Coming from India she also witnessed silimar issues which every international students
+                                        has to go through. She has lots of creative ideas and decided to be a part of this application and
+                                        help incoming students. </p>
+                                </div>
+                                <div class="team-image col-md-6 col-lg-6">
+                                    <img class="col-md-offset-2" src="images/nauka.jpg" width="300px" height="300px">
+                                </div>
+                            </div>
+
+                            <div id="team-member" class="row">
+                                <div class="team-image col-md-6 col-lg-6">
+                                    <img class="col-md-offset-2" src="images/neel.jpg" width="300px" height="300px">
+                                </div>
+                                <div class="team-text col-sm-6 col-md-6 col-lg-6">
+                                    <h3 class="subtitle">Neel Indap</h3>
+                                    <p>Co-Founder of NEUISA. Coming from India he also witnessed silimar issues which every international students
+                                        has to go through. He had prior experience developing websites and decided to be a part of this application
+                                        and help incoming students.</p>
+                                </div>
+                            </div>
+                </div>
+            </div>
+         </div>   
+    </div>
+
+    <div class="row">
+        <div class="container-fluid well">
+            <h2>Locate us! (Physically and virtually)</h2>
+                <div class="col-sm-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.1145074987016!2d-71.09167708486103!3d42.340081979188206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46e17e056ed496c3!2sSnell+Library!5e0!3m2!1sen!2sus!4v1479783833500" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-6">
+                    <a class="twitter-timeline" data-height="450" href="https://twitter.com/Northeastern">Tweets by Northeastern</a> 
+                    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+                </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <footer class="container-fluid text-center">
+            <p>&copy; Northeastern University 2016</p>
+        </footer>
+    </div>
+    
+ </div> 
+</body>
+</html>

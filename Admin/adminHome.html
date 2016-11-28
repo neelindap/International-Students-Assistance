@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ISA | Admin Home</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>		
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">		
+		
+		
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="../css/main.css">
+		<script type="text/javascript" src="admin.table.controller.js"></script>
+		<script type="text/javascript" src="../js/isa.js"></script>
+
+		
+	</head>
+
+	<body ng-app="volAssignApp">
+ 	<div class="container">
+	
+	<div class="row">
+		<nav class="navbar navbar-inverse navbar-fixed-top">	
+			<div class="container-fluid">		
+			
+				<div class="row">
+					<div class="col-sm-6">
+						<img id="uni-logo" src="../images/LOGO.png" alt="Logo">
+					</div>		
+					<div class="col-sm-6">
+						<form action="" id="seacrchForm" class="navbar-form navbar-right">
+						   <div class="input-group">
+							   <input type="Search" placeholder="Search" class="form-control"/>
+							   <div class="input-group-btn">
+						     	    <button class="btn btn-primary">
+										<span class="glyphicon glyphicon-search"></span>
+								    </button>
+							   </div>
+						   </div>
+						</form>
+					</div>
+				</div>
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>					
+				</div>
+
+					
+				<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Assign Volunteer</a></li>
+							<li><a href="volunteerAssigned.html">Assigned</a></li>
+							<li><a href="volunteers.html">Volunteers</a></li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="dropdown-toggle" href="#" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-user"></span> Welcome Admin<span class="caret"></span></a>
+								<div class="dropdown-menu">
+									  <form class="form">
+										<a href="#" id="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+									  </form>
+								</div>	
+							</li>	
+						</ul>
+				</div>
+			</div>
+		</nav>	
+	</div>
+	
+
+	<div class="row" ng-controller="tableData">
+		<div class="container-fluid well">		
+			<div class="col-sm-12">
+				<table class="table table-bordered" id="recordsTable">
+					<thead>
+						<tr>
+							<th width="2%">Select</th>
+							<th>Name</th>
+							<th>Travel Date</th>
+							<th>Email</th>
+							<th>Phone</th>
+						</tr>
+					</thead>
+					<tbody id = 'travelTable'>
+						<tr ng-repeat="person in record | orderBy: 'travelDate'" ng-class="{'selected-item': person.selected}">
+							<td style="text-align: center;">
+								<input type="checkbox" name="personBox" ng-model="person.selected"/>
+								<input type="hidden" id="{{person.id}}"/></td>
+							<td>{{person.name}}</td>
+							<td>{{person.travelDate}}</td>
+							<td>{{person.email}}</td>
+							<td>{{person.phone}}</td>
+						</tr>
+					</tbody>
+				</table>					
+			</div>
+
+			<div class="col-sm-12">
+				<input class="btn btn-primary pull-right" value="Assign Volunteer" ng-click="assignVolunteer()" id="assignVolunteer"/>
+			</div>
+
+			<div id="volunteenModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h2 class="modal-title">Assign Volunteer</h2>
+			      </div>
+			      <div class="modal-body">		
+			      <h5>Assigning volunteer for the following travelers</h5>
+			      <table class="table table-striped table-bordered table-condensed">
+			      	<tr ng-repeat="traveler in personArray">
+			      		<td>{{traveler.name}}
+			      			<input type="hidden" id="traveler"></td>
+			      		<td>{{traveler.travelDate}}</td>
+			      	</tr>
+			      </table>	        
+			        <form class="form-inline">
+		            <div class="form-group">		                
+		                <label for="volunteer">Volunteer: </label>
+		                <select id="volunteer" class="form-control">
+		                    <option value="" selected="selected">Select a volunteer</option>
+		                    <option ng-repeat="volunteer in vRecord" value="{{volunteer.id}}">{{volunteer.name}}</option>
+		                </select>
+		            </div>    
+		            <div class="form-group">	
+		                <label for="time">Time: </label>
+ 						<input type="text" class="form-control" ng-model="time" id="time">
+            		</div>
+            		</form>
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" ng-click="assigned()" data-dismiss="modal">Assign</button>
+			      </div>
+			    </div>
+
+			  </div>
+			</div>
+
+		</div>
+	</div>
+		
+	<div class="row">
+		<footer class="container-fluid text-center">
+			<p>&copy; Northeastern University 2016</p>
+		</footer>
+	</div>
+	
+	</div>	
+	</body>
+
+</html>

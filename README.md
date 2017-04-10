@@ -8,4 +8,4 @@ Also worked with jQuery and angular.
 
 PHP and MySQL for back-end.
 
-Deployed using WAMP.
+Created using WAMP stack.

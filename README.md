@@ -1,11 +1,22 @@
 # WebProject
 
-Final project for Web Development class.
-A website for University's Internation Student Association, to provide assistance for incoming international students.
+We had developed a website for Northeastern University's International Student's Assistance wing. This was setup mainly to provide early assistance to incoming international students, like pick-up from the airport, temporary accommodation,etc. 
+We identified the problem scenario and provided a means of easy access of services to the students to avail them.
 
-Created with Bootstrap as base, HTML5 and CSS3.
-Also worked with jQuery and angular.
+The website consisted of 2 roles:
+Student role : Students can register with their official university email ids for the services
+Admin role : Admin can assign volunteers to students who have registered, add volunteers
 
-PHP and MySQL for back-end.
+The website consisted of static pages, providing information about the team and services for unregistered users as well. 
+Registered user's data was stored in MySQL database.
 
-Created using WAMP stack.
+Technologies :
+- Bootstrap 3
+- HTML5, CSS3
+- Angularjs
+- jQuery
+- Highcharts
+- JVectorMap
+- RESTapi
+- PHP
+-MySQL
